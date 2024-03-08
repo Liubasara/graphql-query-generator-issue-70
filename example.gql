@@ -1,0 +1,23 @@
+scalar JSON
+
+schema {
+  query: Query
+}
+
+type Query {
+  mockTest: UMockTestType
+  # mockTest: mockTestType
+}
+
+type mockTestType {
+  mockInt: Int
+  mockStr: String
+  mockBoolean: Boolean
+  mockJson: JSON
+}
+
+type A {
+  mockArr: [Int]
+}
+
+union UMockTestType = mockTestType | A
